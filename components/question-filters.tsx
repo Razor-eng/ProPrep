@@ -61,6 +61,7 @@ const QuestionFilters = ({
                 </Button>
 
                 <Button
+                    className="hidden md:flex"
                     variant="outline"
                     size="icon"
                     onClick={() => setView(view === "grid" ? "list" : "grid")}

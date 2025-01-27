@@ -73,7 +73,7 @@ const QuestionCard = ({ question, category, view, openDialog, setOpenDialog, id:
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
         >
-            <Card className={`animate-fade-in transition-all duration-300 hover:scale-[1.02] bg-gradient-to-br from-card/50 to-background border-2 border-background/50 dark:border-gray-800 shadow-lg backdrop-blur-sm hover:shadow-xl ${view === "list" ? "flex flex-col md:flex-row items-start w-full md:gap-4" : ""}`}>
+            <Card className={`animate-fade-in transition-all duration-300 hover:scale-[1.02] bg-gradient-to-br from-card/50 to-background border-2 border-background/50 dark:border-gray-800 shadow-lg backdrop-blur-sm h-full hover:shadow-xl ${view === "list" ? "flex flex-col md:flex-row items-start w-full md:gap-4" : "flex flex-col justify-between"}`}>
                 <CardHeader className={`${view === "list" ? "flex-1 w-full md:min-w-[300px]" : ""}`}>
                     <div className="flex flex-row items-start justify-between space-y-0">
                         <div className="flex-1">
