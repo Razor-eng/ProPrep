@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+  }
+
+  .forest {
+    --background: 141 70% 98%;
+    --foreground: 141 84% 4.9%;
+    --card: 141 70% 98%;
+    --card-foreground: 141 84% 4.9%;
+    --popover: 141 70% 98%;
+    --popover-foreground: 141 84% 4.9%;
+    --primary: 141 83.2% 53.3%;
+    --primary-foreground: 141 40% 98%;
+    --secondary: 141 40% 96.1%;
+    --secondary-foreground: 141 47.4% 11.2%;
+    --muted: 141 40% 96.1%;
+    --muted-foreground: 141 16.3% 46.9%;
+    --accent: 141 40% 96.1%;
+    --accent-foreground: 141 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 141 40% 98%;
+    --border: 141 31.8% 91.4%;
+    --input: 141 31.8% 91.4%;
+    --ring: 141 83.2% 53.3%;
+  }
+
+  .sunset {
+    --background: 35 70% 98%;
+    --foreground: 35 84% 4.9%;
+    --card: 35 70% 98%;
+    --card-foreground: 35 84% 4.9%;
+    --popover: 35 70% 98%;
+    --popover-foreground: 35 84% 4.9%;
+    --primary: 35 83.2% 53.3%;
+    --primary-foreground: 35 40% 98%;
+    --secondary: 35 40% 96.1%;
+    --secondary-foreground: 35 47.4% 11.2%;
+    --muted: 35 40% 96.1%;
+    --muted-foreground: 35 16.3% 46.9%;
+    --accent: 35 40% 96.1%;
+    --accent-foreground: 35 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 35 40% 98%;
+    --border: 35 31.8% 91.4%;
+    --input: 35 31.8% 91.4%;
+    --ring: 35 83.2% 53.3%;
+  }
+
+  .ocean {
+    --background: 201 70% 98%;
+    --foreground: 201 84% 4.9%;
+    --card: 201 70% 98%;
+    --card-foreground: 201 84% 4.9%;
+    --popover: 201 70% 98%;
+    --popover-foreground: 201 84% 4.9%;
+    --primary: 201 83.2% 53.3%;
+    --primary-foreground: 201 40% 98%;
+    --secondary: 201 40% 96.1%;
+    --secondary-foreground: 201 47.4% 11.2%;
+    --muted: 201 40% 96.1%;
+    --muted-foreground: 201 16.3% 46.9%;
+    --accent: 201 40% 96.1%;
+    --accent-foreground: 201 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 201 40% 98%;
+    --border: 201 31.8% 91.4%;
+    --input: 201 31.8% 91.4%;
+    --ring: 201 83.2% 53.3%;
+  }
+
+  * {
+    @apply border-border;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) var(--background);
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary));
+    opacity: 0.8;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  .text-success {
+    @apply text-green-500;
+  }
+}
+
+@keyframes text-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-text-gradient {
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: text-gradient 3s ease infinite;
+}
